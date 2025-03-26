@@ -1,6 +1,6 @@
 import pygame as pg
 
-from .. import ALTO, ANCHO
+from . import ALTO, ANCHO
 from .escenas import Partida, Portada, Puntuaciones
 
 
@@ -19,7 +19,9 @@ class Arkanoid:
     def jugar(self):
 
         for escena in self.escenas:
-            escena.bucle_principal()
+            fin = escena.bucle_principal()
+            if fin == True:
+                break
 
         pg.quit()
 
