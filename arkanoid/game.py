@@ -14,7 +14,7 @@ class Arkanoid:
         partida = Partida(self.pantalla)
         records = Puntuaciones(self.pantalla)
 
-        self.escenas = [portada, partida, records]
+        self.escenas = [records, portada, partida, records]
 
     def jugar(self):
 
